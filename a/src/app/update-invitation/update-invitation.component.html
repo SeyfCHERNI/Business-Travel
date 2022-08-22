@@ -1,0 +1,53 @@
+
+<div class="container">
+  <div>
+    <h2>Ajouter une invitations :</h2>
+  </div>
+
+  <form (ngSubmit) = "onSubmit()" >
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label >ID Invitation</label>
+      <input  type="text" [(ngModel)]="Invitation.invitationId" name="idInv" class="form-control">
+    </div>
+
+
+    <div  class="col-sm-4 col-md-4 col-lg-4" >
+      <label >Date </label>
+      <input  type="date"  [ngModel]="Invitation.date | date: 'yyyy-MM-dd'"
+              (ngModelChange)=" Invitation.date= $event"   name="date" class="form-control">
+    </div>
+
+
+
+    <div class="col-sm-2 col-md-2 col-lg-2">
+      <label >employe</label>
+      <input type="text" [(ngModel)]= "Invitation.employe" name="employe" class="form-control">
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label >Metier employe</label>
+      <input type="text" [(ngModel)]= "Invitation.metier_employe" name="metier_employe" class="form-control">
+    </div>
+
+    <div class="col-sm-4 col-md-4 col-lg-4">
+      <label >Recepteur</label>
+      <input type="text" [(ngModel)]= "Invitation.recepteur" name="destination" class="form-control">
+    </div>
+    <div class="col-sm-4 col-md-4 col-lg-4" style=" font-size: 1.25em;
+  font-weight: 100;
+  color: black;
+  background-color: transparent;display: inline-block;">
+        <label class="label-img" for="file-input">
+          PRESS TO CHOOSE A FILE
+        </label>
+        <input class="file-input" id="file-input" name="file" type="file" (change)="onFileChange($event)">
+      </div>
+      <img [src]="imageSrc" *ngIf="imageSrc" style="height: 200px; width:400px">
+
+      <div class="mt-2">
+        <button type="submit" class="btn btn-success">Modifier</button>
+
+
+      </div>
+    </form>
+  </div>

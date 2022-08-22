@@ -1,0 +1,38 @@
+.img {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  transition-duration: 0.2s;
+  box-shadow: 0 5px 15px #193047;
+  border-radius: 42px;
+}
+* {
+  box-sizing: border-box;
+}
+
+
+
+
+
+/* Style the class named block */
+.block {
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  text-align: center;
+  background-color: green;
+  color: black;
+  margin-bottom: 50px;
+}
+
+/* Provide styling for when mouse will move over the counter*/
+.block:hover {
+  transform: scale(1.1);
+  background-color: brown;
+  transition-duration: 2s;
+  color: red;
+}
+
+.fa {
+  font-size: 50px;
+}

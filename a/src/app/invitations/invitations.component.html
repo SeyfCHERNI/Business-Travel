@@ -1,0 +1,46 @@
+
+
+
+<div  class="container">
+
+
+       <div class="block">
+         <!-- Add user icon to the counter -->
+         <p><i class="fa fa-envelope"></i></p>
+         <h3> {{this.numi}} invitations</h3>
+
+       </div>
+
+  <div style="margin-bottom: 100px; font-size: large;margin-left: 500px;">
+     <th >invitations</th></div>
+  <div class="card shadow mb-4">
+    <div class="card-body">
+      <table class ="table table-striped">
+        <tr> <th>Id</th> <th>employ</th> <th>Metier_employ</th> <th>destination</th> <th>Date</th> <th>Image</th>   </tr>
+      <tbody *ngFor ="let invitation of invitations">
+        <tr>
+
+          <td>{{invitation?.invitationId}}</td>
+          <td>{{invitation?.employe}}</td>
+          <td>{{invitation?.metier_employe}}</td>
+          <td>{{invitation?.recepteur}}</td>
+          <td>{{invitation?.date|date:'dd/MM/yyyy'}}</td>
+          <td><img src={{invitation?.picture}} class="img"></td>
+
+          <td><a class="btn btn-danger" (click)="supprimerInvitation(invitation)">Supprimer</a></td>
+          <td><a class="btn btn-success" [routerLink]="['/updateInvitation',invitation.invitationId]">Modifier</a></td>
+        </tr>
+
+
+        </tbody>
+
+      </table>
+
+
+
+
+
+
+    </div>
+  </div>
+</div>

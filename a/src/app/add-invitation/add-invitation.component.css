@@ -1,0 +1,15 @@
+
+
+input[type="file"] {
+
+  font-size: 1.25em;
+  font-weight: 100;
+  color: black;
+  background-color: transparent;
+
+  display: inline-block;
+
+}
+input[type="file"]:hover {
+  background-color: green;
+}
